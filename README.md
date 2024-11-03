@@ -1,9 +1,11 @@
 
 # 🌟 Ali's Luxury Hair Color Brand - Website 🌟  
-
 Welcome to **Ali's Luxury Hair Color Brand**, a modern and elegant web application built with **Next.js**. This website reflects the brand's sophistication with fast performance, modern aesthetics, and responsive design.
 
-![Ali's Luxury Hair Color](public/images/banner.jpg)
+
+<img src="public/images/banner.jpg" alt="Ali's Luxury Hair Color" style="width: 600px; height: 250px"/>
+
+<img src="public/images/logo.jpeg" alt="27A" style="width: 110px; height: 100px"/>
 
 ## 🚀 Features  
 - 🌈 **Beautiful Product Display:** Showcase luxury hair colors with a sleek product catalog.  
