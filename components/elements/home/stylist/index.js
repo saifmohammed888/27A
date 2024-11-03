@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import stylistImage from "../../../../public/images/models/ali.png";
+import stylistImage from "/images/models/ali.png";
 
 const LuxuryStylist = () => {
   return (

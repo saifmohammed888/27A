@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import productImage1 from "../../../../public/images/products/product1.png"; 
-import productImage2 from "../../../../public/images/products/product2.png"; 
+import productImage1 from "/images/products/product1.png"; 
+import productImage2 from "/images/products/product2.png"; 
 
 const ComingSoon = () => {
   return (

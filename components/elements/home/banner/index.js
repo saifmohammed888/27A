@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import model from "../../../../public/images/models/model1.JPG"
+import model from "../../.././images/models/model1.JPG"
 
 const Banner = () => {
   // bg-gradient-to-r from-yellow-50 via-white to-yellow-50

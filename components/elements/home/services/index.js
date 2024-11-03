@@ -2,8 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
-import balayageImage from "../../../../public/images/models/model2.jpg";
-import highlightsImage from "../../../../public/images/models/model3.jpg";
+import balayageImage from "/images/models/model2.jpg";
+import highlightsImage from "/images/models/model3.jpg";
 
 const ServicesOffered = () => {
   const { ref: service1Ref, inView: service1InView } = useInView({ triggerOnce: true, threshold: 0.2 });
