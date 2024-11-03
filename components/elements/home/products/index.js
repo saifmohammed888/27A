@@ -72,7 +72,7 @@ const ComingSoon = () => {
         <div className="flex-1 flex justify-start">
           <div className="w-72 h-48 lg:w-[550px] lg:h-[300px] relative">
             <Image
-              src={"/images/product2.png"}
+              src={"/images/products/product2.png"}
               alt="27A Product Collection"
               className="rounded-lg"
               layout="fill"
