@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import stylistImage from "/images/models/ali.png";
 
 const LuxuryStylist = () => {
   return (
@@ -10,7 +9,7 @@ const LuxuryStylist = () => {
         <div className="flex-1 flex ld:justify-center">
             <div className="w-64 h-80 lg:w-[750px] lg:h-[550px] relative">
             <Image
-               src={stylistImage}
+               src={"/images/models/ali.png"}
                 alt="Luxury Hair Stylist"
                 className="rounded-sm"
                 layout="fill"

@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from "/images/logo.jpeg"; 
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
         <div className="flex-1 text-center lg:text-left space-y-4">
           <div className="flex justify-center lg:justify-start">
             <Image
-              src={logo}
+              src={"/images/logo.jpeg"}
               alt="27A Logo"
               width={80}
               height={80}

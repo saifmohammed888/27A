@@ -1,7 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import productImage1 from "/images/products/product1.png"; 
-import productImage2 from "/images/products/product2.png"; 
 
 const ComingSoon = () => {
   return (
@@ -22,7 +20,7 @@ const ComingSoon = () => {
         <div className="flex-1 flex justify-end">
           <div className="w-72 h-48 lg:w-[550px] lg:h-[300px] relative">
             <Image
-              src={productImage1}
+              src={"/images/products/product1.png"}
               alt="27A Product Display"
               className="rounded-lg"
               layout="fill"
@@ -74,7 +72,7 @@ const ComingSoon = () => {
         <div className="flex-1 flex justify-start">
           <div className="w-72 h-48 lg:w-[550px] lg:h-[300px] relative">
             <Image
-              src={productImage2}
+              src={"/images/  /product2.png"}
               alt="27A Product Collection"
               className="rounded-lg"
               layout="fill"

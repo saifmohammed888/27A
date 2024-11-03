@@ -2,8 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
-import balayageImage from "/images/models/model2.jpg";
-import highlightsImage from "/images/models/model3.jpg";
 
 const ServicesOffered = () => {
   const { ref: service1Ref, inView: service1InView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -26,7 +24,7 @@ const ServicesOffered = () => {
         <div className="flex-1 flex lg:justify-center lg:items-center">
           <div className="w-64 h-80 lg:w-[450px] lg:h-[550px] relative">
             <Image
-              src={balayageImage}
+              src={"/images/models/model2.jpg"}
               alt="Highlights & Lowlights"
               className="rounded-lg"
               layout="fill"
@@ -90,7 +88,7 @@ const ServicesOffered = () => {
         <div className="flex-1 flex lg:justify-center lg:items-center">
           <div className="w-64 h-80 lg:w-[450px] lg:h-[550px] relative">
             <Image
-              src={highlightsImage}
+              src={"/images/models/model3.jpg"}
               alt="Highlights & Lowlights"
               className="rounded-lg"
               layout="fill"

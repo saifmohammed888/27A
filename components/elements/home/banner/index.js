@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import model from "../../.././images/models/model1.JPG"
 
 const Banner = () => {
   // bg-gradient-to-r from-yellow-50 via-white to-yellow-50
@@ -30,7 +29,7 @@ const Banner = () => {
       <div className="flex-1 flex lg:justify-center lg:items-center">
         <div className="w-64 h-80 lg:w-[450px] lg:h-[550px] relative">
           <Image
-            src={model}
+            src={"/images/models/model1.JPG"}
             alt="Luxury hair care"
             className="rounded-lg"
             layout="fill"
