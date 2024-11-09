@@ -6,6 +6,7 @@ import { services } from '../components/utils/constants';
 import Modal from 'react-modal';
 import 'react-toastify/dist/ReactToastify.css';
 import 'tailwindcss/tailwind.css';
+import WhatsAppPopup from '../components/common/whatsapp';
 
 const Services = () => {
   return (
@@ -78,6 +79,7 @@ const CardGrid = () => {
   return (
     <div className="min-h-screen py-12 px-6">
       <ToastContainer position="top-right" autoClose={false} />
+      <WhatsAppPopup/>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         {services.map((service) => (
           <motion.div

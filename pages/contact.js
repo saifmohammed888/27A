@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HomeLayout } from '../components/layouts/homeLayout';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import WhatsAppPopup from '../components/common/whatsapp';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -215,6 +216,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        <WhatsAppPopup/>
     </div>    
   </HomeLayout>
   );

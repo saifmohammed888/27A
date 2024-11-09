@@ -35,6 +35,7 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: "support@27a.beauty",
       to: email,
+      cc: "saifmohammed888@gmail.com, alihairstories@gmail.com",
       subject: `27A Beauty Support - ${subject}`,
       text: responseMessage,
     });
