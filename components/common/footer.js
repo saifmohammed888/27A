@@ -22,9 +22,9 @@ const Footer = () => {
         </div>
 
         {/* Footer Links */}
-        <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-6 text-center lg:text-left">
+        <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-6 md:text-center lg:text-left">
           <div>
-            <h4 className="font-semibold mb-3">Company</h4>
+            <h4 className="font-semibold mb-3 underline">Company</h4>
             <ul className="space-y-4">
               <li><a href="#" className="hover:text-yellow-500">About Us</a></li>
               <li><a href="#" className="hover:text-yellow-500">Products</a></li>
@@ -33,7 +33,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-3">Support</h4>
+            <h4 className="font-semibold mb-3 underline">Support</h4>
             <ul className="space-y-4">
               <li><a href="#" className="hover:text-yellow-500">FAQ</a></li>
               <li><a href="#" className="hover:text-yellow-500">Terms</a></li>
@@ -42,7 +42,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-3">More</h4>
+            <h4 className="font-semibold mb-3 underline">More</h4>
             <ul className="space-y-4">
               <li><a href="#" className="hover:text-yellow-500">Career</a></li>
               <li><a href="#" className="hover:text-yellow-500">Testimonials</a></li>

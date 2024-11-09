@@ -25,16 +25,19 @@ const LuxuryStylist = () => {
           <blockquote className="italic text-2xl text-white mb-4">"Transforming hair into art, one style at a time"</blockquote>
 
           <p className="text-gray-300 text-base">
-            Mr Ali, with over 15 years in the fashion industry, is a master of luxury hair color, treatments, styling, and cuts. Known for his precision, he crafts colors that enhance each client’s natural beauty. From soft balayage to bold statements, each look leaves a lasting impression.
+            Ali, an award-winning hair designer with over 18 years of experience, started his career in Delhi, learning the art of hairstyling from his father before refining his craft at Jawed Habib Institute and London’s Vidal Sassoon Academy.
           </p>
 
           <p className="text-gray-300 text-base">
-            With a high-fashion and editorial background, he brings refined elegance to every style, blending classic and modern trends. Specializing in advanced treatments, he prioritizes hair health with premium products. Every cut and style boosts confidence, creating looks clients love for any occasion.
+            His brand, ALI HAIR STORIES, is renowned for its luxury services and has collaborated with top names in fashion, including Lakmé Fashion Week and Warren Tricomi. Ali’s client list of celebrities, CEOs, and industry leaders reflects his influence and dedication to creating transformative, bespoke styling experiences.
           </p>
-
+          <p className="text-gray-300 text-base">
+            His client portfolio includes celebrities, politicians, CEOs, and founders, reflecting his influence and authority in the hair industry. Known for pushing boundaries and setting trends
+          </p>
           <p className="text-yellow-300 text-lg font-semibold mt-6">
             Mohammed Ali – Celebrity Stylist & Luxury Hair Expert
           </p>
+
         </div>
       </div>
     </section>
