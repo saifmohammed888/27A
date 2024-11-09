@@ -4,9 +4,11 @@ import { HomeLayout } from '../components/layouts/homeLayout';
 const Gallery = () => {
   const [loading, setLoading] = useState(true);
 
+  // <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = "https://cdn.lightwidget.com/widgets/lightwidget.js";
+    script.src = "https://static.elfsight.com/platform/platform.js";
     script.async = true;
 
     // Set loading to false once the script has loaded
@@ -26,6 +28,14 @@ const Gallery = () => {
       clearTimeout(timeout);
     };
   }, []);
+
+  useEffect(() => {
+    const elfsightLink = document.querySelector('a[title="Free Instagram Feed widget"]');
+    if (elfsightLink) {
+      elfsightLink.style.display = 'none';
+    }
+  }, []);
+
       
     return (
     <HomeLayout pageName="Gallery">
@@ -44,13 +54,14 @@ const Gallery = () => {
         
         {/* Iframe Section */}
         <section className={`w-full overflow-hidden ${loading ? 'hidden' : ''}`}>
-          <iframe
+          {/* <iframe
             src="//lightwidget.com/widgets/cbc91b5ccc57572baf8578b885eb5daa.html"
             allowTransparency="true"
             className="lightwidget-widget"
             style={{ width: '100%', border: 0, overflow: 'hidden', height: '400px' }}
             title="Instagram Gallery"
-          ></iframe>
+            ></iframe> */}
+          <div class="elfsight-app-a24a2279-b351-42fd-a6cc-afaa6ba0dc81" data-elfsight-app-lazy></div>
         </section>
       </div>    
     </HomeLayout>
