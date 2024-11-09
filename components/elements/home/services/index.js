@@ -24,7 +24,7 @@ const ServicesOffered = () => {
         <div className="flex-1 flex lg:justify-center lg:items-center">
           <div className="w-64 h-80 lg:w-[450px] lg:h-[550px] relative">
             <Image
-              src={"/images/models/model2.JPG"}
+              src={"/images/models/model2.jpg"}
               alt="Highlights & Lowlights"
               className="rounded-lg"
               layout="fill"
