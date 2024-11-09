@@ -20,7 +20,7 @@ const LuxuryStylist = () => {
 
         {/* Content Section */}
         <div className="flex-1 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-yellow-300">Our Luxury Stylist</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-yellow-600">Our Luxury Stylist</h2>
 
           <blockquote className="italic text-2xl text-white mb-4">"Transforming hair into art, one style at a time"</blockquote>
 

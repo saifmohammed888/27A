@@ -9,7 +9,7 @@ const ServicesOffered = () => {
   // bg-gradient-to-r from-yellow-50 via-white to-yellow-50
   return (
     <section className="py-16 px-8 sm:px-20 lg:px-40 space-y-16">
-      <h2 className="text-center text-3xl md:text-4xl font-serif font-bold text-black mb-12 animate-fade-in">
+      <h2 className="text-center text-3xl md:text-4xl font-serif font-bold text-yellow-600 mb-12 animate-fade-in">
         Services Offered
       </h2>
 

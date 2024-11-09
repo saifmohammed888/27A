@@ -4,7 +4,7 @@ import { ScissorsIcon, SparklesIcon, BeakerIcon } from '@heroicons/react/24/outl
 const Features = () => {
   return (
     <section className="bg-black text-white py-16 px-8 sm:px-20 xl:px-40">
-      <h2 className="text-center text-xl sm:text-2xl md:text-4xl font-serif font-bold text-white mb-12">
+      <h2 className="text-center text-xl sm:text-2xl md:text-4xl font-serif font-bold text-yellow-600 mb-12">
         Our Expertise in Luxury Hair Styling <br /> & Treatments
       </h2>
       <div className="flex flex-col md:flex-row justify-center items-center md:space-x-12 space-y-12 md:space-y-0">

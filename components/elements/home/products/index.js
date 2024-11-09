@@ -6,7 +6,7 @@ const ComingSoon = () => {
     <section className="bg-white py-16 px-8 sm:px-20 lg:px-40 space-y-16">
       {/* Heading and Description */}
       <div className="text-center space-y-6">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-black">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-yellow-600">
           Coming Soon - Luxury with 27A
         </h2>
         <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">

@@ -27,7 +27,7 @@ const Navbar = () => {
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
-          <Link href="/products">Products</Link>
+          {/* <Link href="/products">Products</Link> */}
           <Link href="/gallery">Gallery</Link>
           <Link href="/contact">Contact</Link>
         </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
           <Link href="/" onClick={() => setNavOpen(false)}>Home</Link>
           <Link href="/about" onClick={() => setNavOpen(false)}>About</Link>
           <Link href="/services" onClick={() => setNavOpen(false)}>Services</Link>
-          <Link href="/products" onClick={() => setNavOpen(false)}>Products</Link>
+          {/* <Link href="/products" onClick={() => setNavOpen(false)}>Products</Link> */}
           <Link href="/gallery" onClick={() => setNavOpen(false)}>Gallery</Link>
           <Link href="/contact" onClick={() => setNavOpen(false)}>Contact</Link>
           <button
