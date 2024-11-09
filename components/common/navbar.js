@@ -34,9 +34,11 @@ const Navbar = () => {
 
         {/* Book Now Button */}
         <div className="hidden md:block">
+        <Link href="/booking">
           <button className="px-5 py-2 border-2 border-black rounded-full text-black hover:bg-black hover:text-white transition-all duration-300">
-            Book Now
-          </button>
+           Book Now
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -61,12 +63,14 @@ const Navbar = () => {
           {/* <Link href="/products" onClick={() => setNavOpen(false)}>Products</Link> */}
           <Link href="/gallery" onClick={() => setNavOpen(false)}>Gallery</Link>
           <Link href="/contact" onClick={() => setNavOpen(false)}>Contact</Link>
+          <Link href="/booking">
           <button
             className="px-5 py-2 border-2 w-[150px] border-black text-black hover:bg-black hover:text-white transition-all duration-300"
             onClick={() => setNavOpen(false)}
           >
-            Book Now
-          </button>
+           Book Now
+            </button>
+          </Link>
         </div>
       )}
     </nav>

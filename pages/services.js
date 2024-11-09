@@ -1,119 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import 'tailwindcss/tailwind.css';
 import { HomeLayout } from '../components/layouts/homeLayout';
+import { toast, ToastContainer } from 'react-toastify';
+import { services } from '../components/utils/constants';
+import Modal from 'react-modal';
+import 'react-toastify/dist/ReactToastify.css';
+import 'tailwindcss/tailwind.css';
 
-const services = [
-    {
-      id: 1,
-      title: 'Full Hair Color',
-      description: 'Complete color coverage for a consistent and vibrant look.',
-      imageUrl: 'images/services/service1.jpg',
-    },
-    {
-      id: 2,
-      title: 'Highlights',
-      description: 'Lighten selected sections of hair for a bright and blended look.',
-      imageUrl: 'images/services/service2.jpg',
-    },
-    {
-      id: 3,
-      title: 'Partial Highlights',
-      description: 'Highlights applied to specific sections for a natural look.',
-      imageUrl: 'images/services/service3.jpg',
-    },
-    {
-      id: 4,
-      title: 'Balayage',
-      description: 'Natural sun-kissed highlights with a smooth, hand-painted technique.',
-      imageUrl: 'images/services/service4.jpg',
-    },
-    {
-      id: 5,
-      title: 'Ombre',
-      description: 'Gradual fade from dark roots to light ends, creating a beautiful transition.',
-      imageUrl: 'images/services/service5.jpg',
-    },
-    {
-      id: 6,
-      title: 'Sombre (Soft Ombre)',
-      description: 'A softer, more subtle version of ombre for a natural transition.',
-      imageUrl: 'images/services/service6.jpg',
-    },
-    {
-      id: 7,
-      title: 'Lowlights',
-      description: 'Adding darker shades to certain strands for depth and contrast.',
-      imageUrl: 'images/services/service7.jpg',
-    },
-    {
-      id: 8,
-      title: 'Root Touch-Up',
-      description: 'Color application to new hair growth for consistent color coverage.',
-      imageUrl: 'images/services/service8.jpg',
-    },
-    {
-      id: 9,
-      title: 'Glossing Treatment',
-      description: 'Adds shine and refreshes color for a vibrant finish.',
-      imageUrl: 'images/services/service9.jpg',
-    },
-    {
-      id: 10,
-      title: 'Hair Tinting',
-      description: 'Temporary or semi-permanent color to adjust tone and add shine.',
-      imageUrl: 'images/services/service10.jpg',
-    },
-    {
-      id: 11,
-      title: 'Babylights',
-      description: 'Very fine highlights that mimic natural, sun-lit highlights.',
-      imageUrl: 'images/services/service11.jpg',
-    },
-    {
-      id: 12,
-      title: 'Color Correction',
-      description: 'Correcting unwanted tones or uneven color for a fresh start.',
-      imageUrl: 'images/services/service12.jpg',
-    },
-    {
-      id: 13,
-      title: 'Fantasy Colors',
-      description: 'Bright, bold colors for creative and high-fashion looks.',
-      imageUrl: 'images/services/service13.jpg',
-    },
-    {
-      id: 14,
-      title: 'Double Process Color',
-      description: 'Bleaching followed by color application for vibrant results.',
-      imageUrl: 'images/services/service14.jpg',
-    },
-    {
-      id: 15,
-      title: 'Highlights/Lowlights Combo',
-      description: 'Combining highlights and lowlights for a multi-dimensional look.',
-      imageUrl: 'images/services/service15.jpg',
-    },
-    {
-      id: 16,
-      title: 'Shadow Root',
-      description: 'Blending root color with the rest of the hair for a natural transition.',
-      imageUrl: 'images/services/service16.jpg',
-    },
-    {
-      id: 17,
-      title: 'Toner',
-      description: 'Adjusts undertones and neutralizes brassiness for a perfect shade.',
-      imageUrl: 'images/services/service17.jpg',
-    },
-    {
-      id: 18,
-      title: 'Hair Contouring',
-      description: 'Strategically placed highlights and lowlights to enhance facial features.',
-      imageUrl: 'images/services/service18.jpg',
-    },
-];
-  
 const Services = () => {
   return (
     <HomeLayout pageName="Services">
@@ -128,33 +21,179 @@ const Services = () => {
 }
 
 const CardGrid = () => {
-    return (
-      <div className="min-h-screen py-12 px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {services.map((service) => (
-            <motion.div
-              key={service.id}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl"
-            >
-              <img
-                src={service.imageUrl}
-                alt={service.title}
-                className="w-full h-48 object-cover object-center"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <button className="w-full bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition duration-200">
-                  Query for Pricing
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
+  const [loading, setLoading] = useState(false)
+
+  const openModal = (service) => {
+    setSelectedService(service);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setSelectedService(null);
+  };
+
+  const handleSubmitQuery = async (e) => {
+    e.preventDefault();
+    const formData = {
+      name: e.target.name.value,
+      phoneNumber: e.target.phoneNumber.value,
+      email: e.target.email.value,
+      subject: `Pricing request for ${selectedService.title}`,
+      message: `Please Share price for ${selectedService.title} - ${selectedService.description}`
+    };
+
+    if (!formData.name || !formData.email || !formData.phoneNumber) {
+      toast.error("Please fill in all fields.");
+      return;
+    }
+    
+    setLoading(true); // Start loading
+
+    try {
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success('Pricing submitted successfully!');
+      } else {
+        toast.error("Error sending request. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Error sending message. Please try again.");
+    } finally {
+      setLoading(false); 
+    }
+
+    closeModal();
+  };
+
+  return (
+    <div className="min-h-screen py-12 px-6">
+      <ToastContainer position="top-right" autoClose={false} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        {services.map((service) => (
+          <motion.div
+            key={service.id}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl"
+          >
+            <img
+              src={service.imageUrl}
+              alt={service.title}
+              className="w-full h-48 object-cover object-center"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
+              <p className="text-gray-600 mb-6">{service.description}</p>
+              <button
+                onClick={() => openModal(service)}
+                className="w-full bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition duration-200"
+              >
+                Query for Pricing
+              </button>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    );
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Query for Pricing"
+        className="bg-white relative rounded-lg max-w-lg mx-auto my-16 shadow-lg outline-none"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+      >
+        <a href='#' onClick={closeModal} className="flex font-bold text-xl justify-end pr-4">X</a>
+        <section className='p-8'>
+        {selectedService && (
+          <div>
+            <img
+              src={selectedService.imageUrl}
+              alt={selectedService.title}
+              className="w-full h-48 object-cover object-center"
+            />
+            <h2 className="text-2xl font-bold text-gray-800 mt-2">{selectedService.title}</h2>
+            <p className="text-gray-600 mb-6">{selectedService.description}</p>
+            <form onSubmit={handleSubmitQuery}>
+              <div className="mb-4">
+                <label className="block text-gray-700 font-semibold mb-2" htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-600"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-700 font-semibold mb-2" htmlFor="phoneNumber">Phone Number</label>
+                <input
+                  type="phoneNumber"
+                  id="phoneNumber"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-600"
+                  placeholder="Enter your phoneNumber"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-700 font-semibold mb-2" htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-600"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full hover:bg-gray-800 text-white py-2 sm:py-3 rounded-md bg-yellow-600 transition duration-200"
+                disabled={loading}
+              >
+                  {loading ? (
+                    <span className='flex justify-center'>
+                      <svg
+                        className="animate-spin h-5 w-5 mr-3 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                        ></path>
+                      </svg>
+                      Submitting...
+                    </span>
+                  ) : (
+                    "Submit Pricing Query"
+                  )}
+              </button>
+            </form>
+          </div>
+        )}
+        </section>
+      </Modal>
+    </div>
+  );
 };
-  
+
 export default Services

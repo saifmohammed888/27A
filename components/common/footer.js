@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -26,19 +27,19 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-3 underline">Company</h4>
             <ul className="space-y-4">
-              <li><a href="#" className="hover:text-yellow-500">About Us</a></li>
-              <li><a href="#" className="hover:text-yellow-500">Products</a></li>
-              <li><a href="#" className="hover:text-yellow-500">Services</a></li>
-              <li><a href="#" className="hover:text-yellow-500">Blogs</a></li>
+            <li><Link href="/about" className="hover:text-yellow-500">About Us</Link></li>
+            <li><Link href="/products" className="hover:text-yellow-500">Products</Link></li>
+            <li><Link href="/services" className="hover:text-yellow-500">Services</Link></li>
+            <li><Link href="/blogs" className="hover:text-yellow-500">Blogs</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-3 underline">Support</h4>
             <ul className="space-y-4">
-              <li><a href="#" className="hover:text-yellow-500">FAQ</a></li>
-              <li><a href="#" className="hover:text-yellow-500">Terms</a></li>
-              <li><a href="#" className="hover:text-yellow-500">Legal</a></li>
-              <li><a href="#" className="hover:text-yellow-500">Privacy</a></li>
+              <li><Link href="/faq" className="hover:text-yellow-500">FAQ</Link></li>
+              <li><Link href="/terms" className="hover:text-yellow-500">Terms</Link></li>
+              <li><Link href="/legal" className="hover:text-yellow-500">Legal</Link></li>
+              <li><Link href="/privacy" className="hover:text-yellow-500">Privacy</Link></li>
             </ul>
           </div>
           <div>
