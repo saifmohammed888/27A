@@ -32,9 +32,9 @@ const ComingSoon = () => {
         {/* Features List 1 */}
         <div className="flex-1 space-y-4 text-left sm:text-2xl md:text-left text-gray-800">
           <ul className="space-y-4">
-            <li className="flex items-start">
+            {/* <li className="flex items-start">
               <span className="font-bold text-yellow-700 mr-2">→</span> Exclusive, salon-quality formulas.
-            </li>
+            </li> */}
             <li className="flex items-start">
               <span className="font-bold text-yellow-700 mr-2">→</span> Eco-friendly packaging.
             </li>
@@ -53,9 +53,9 @@ const ComingSoon = () => {
         {/* Features List 2 */}
         <div className="flex-1 space-y-4 text-left sm:text-2xl md:text-right text-gray-800">
           <ul className="space-y-4 mt-8 md:mt-0 md:pl-[25%]">
-            <li className="flex items-end">
+            {/* <li className="flex items-end">
               <span className="font-bold text-yellow-700 mr-2">→</span> Salon results at home.
-            </li>
+            </li> */}
             <li className="flex items-start">
               <span className="font-bold text-yellow-700 mr-2">→</span> Healthier, stronger hair.
             </li>

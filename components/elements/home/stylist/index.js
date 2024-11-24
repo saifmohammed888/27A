@@ -29,11 +29,11 @@ const LuxuryStylist = () => {
           </p>
 
           <p className="text-gray-300 text-base">
-            His brand, ALI HAIR STORIES, is renowned for its luxury services and has collaborated with top names in fashion, including Lakmé Fashion Week and Warren Tricomi. Ali’s client list of celebrities, CEOs, and industry leaders reflects his influence and dedication to creating transformative, bespoke styling experiences.
+            His brand, ALI HAIR STORIES, is renowned for its luxury services and has collaborated with top names in fashion, including Lakmé Fashion Week and Warren Tricomi. <br/>  <br/>  Mr Ali’s client list shows his influence and dedication to creating transformative, bespoke styling experiences.
           </p>
-          <p className="text-gray-300 text-base">
+          {/* <p className="text-gray-300 text-base">
             His client portfolio includes celebrities, politicians, CEOs, and founders, reflecting his influence and authority in the hair industry. Known for pushing boundaries and setting trends
-          </p>
+          </p> */}
           <p className="text-yellow-300 text-lg font-semibold mt-6">
             Mohammed Ali – Celebrity Stylist & Luxury Hair Expert
           </p>

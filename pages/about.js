@@ -19,7 +19,7 @@ function About() {
           <section className="lg:col-span-3 animate-fadeInUp order-2 md:order-1">
             <div className="md:text-center lg:text-left lg:pr-20 xl:pr-40">
               <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6">
-                At 27A, we redefine luxury hair care with a passion for artistry and attention to detail, transforming every shade and style into a personalized masterpiece. Our journey spans collaborations with iconic names, from Jawed Habib to the prestigious Vidal Sassoon Academy in London, where our founder mastered the art of hair design and architecture.
+                At 27A, we redefine luxury hair care with a passion for artistry and attention to detail, transforming every shade and style into a personalized masterpiece.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6">
                 Today, at 27A, we bring this legacy to life through bespoke coloring and treatments that celebrate each client’s unique beauty and style. Experience the essence of luxury in every strand, where innovation, precision, and elegance come together to create a look as distinctive as you are.
